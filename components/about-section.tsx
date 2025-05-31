@@ -13,7 +13,7 @@ export default function AboutSection() {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-64 h-64 rounded-full overflow-hidden bg-secondary-blue">
               <Image
-                src="/emperatrizmoreno/placeholder.svg?height=400&width=400"
+                src="/emperatrizmoreno/skadi1.jpg?height=400&width=400"
                 alt="Emperatriz Moreno"
                 fill
                 className="object-cover"

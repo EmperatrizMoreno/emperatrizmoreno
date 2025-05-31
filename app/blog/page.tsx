@@ -11,7 +11,7 @@ const posts: BlogPost[] = [
       "Descubre las claves para cultivar una mentalidad que te permita superar obstáculos y alcanzar tus metas personales y profesionales.",
     date: "21 Mayo, 2025",
     category: "Desarrollo Personal",
-    imageUrl: "/emperatrizmoreno/placeholder.svg?height=300&width=600",
+    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
     slug: "como-desarrollar-mentalidad-crecimiento",
   },
   {
@@ -21,7 +21,7 @@ const posts: BlogPost[] = [
       "Aprende a organizar tu tiempo de manera eficiente para aumentar tu productividad y reducir el estrés en tu día a día.",
     date: "15 Mayo, 2025",
     category: "Productividad",
-    imageUrl: "/emperatrizmoreno/placeholder.svg?height=300&width=600",
+    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
     slug: "estrategias-gestion-tiempo",
   },
   {
@@ -30,7 +30,7 @@ const posts: BlogPost[] = [
     excerpt: "Explora cómo la comunicación asertiva puede transformar tus relaciones personales y profesionales.",
     date: "10 Mayo, 2025",
     category: "Comunicación",
-    imageUrl: "/emperatrizmoreno/placeholder.svg?height=300&width=600",
+    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
     slug: "poder-comunicacion-asertiva",
   },
   {
@@ -40,7 +40,7 @@ const posts: BlogPost[] = [
       "Descubre cómo la práctica del mindfulness puede ayudarte a reducir la ansiedad y mejorar tu bienestar general.",
     date: "5 Mayo, 2025",
     category: "Bienestar",
-    imageUrl: "/emperatrizmoreno/placeholder.svg?height=300&width=600",
+    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
     slug: "mindfulness-vivir-presente",
   },
   {
@@ -49,7 +49,7 @@ const posts: BlogPost[] = [
     excerpt: "Aprende a liderar con empatía y visión en entornos cambiantes y desafiantes.",
     date: "1 Mayo, 2025",
     category: "Liderazgo",
-    imageUrl: "/emperatrizmoreno/placeholder.svg?height=300&width=600",
+    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
     slug: "liderazgo-consciente-tiempos-cambio",
   },
   {
@@ -59,7 +59,7 @@ const posts: BlogPost[] = [
       "Explora las claves para desarrollar conexiones genuinas y significativas en todos los ámbitos de tu vida.",
     date: "25 Abril, 2025",
     category: "Relaciones",
-    imageUrl: "/emperatrizmoreno/placeholder.svg?height=300&width=600",
+    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
     slug: "construyendo-relaciones-autenticas",
   },
 ]
