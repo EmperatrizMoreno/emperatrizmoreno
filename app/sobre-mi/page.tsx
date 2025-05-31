@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mt-12">
         <div className="flex justify-center md:justify-end">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-secondary-blue">
-            <Image src="/placeholder.svg?height=400&width=400" alt="Emperatriz Moreno" fill className="object-cover" />
+            <Image src="/emperatrizmoreno/placeholder.svg?height=400&width=400" alt="Emperatriz Moreno" fill className="object-cover" />
           </div>
         </div>
 
