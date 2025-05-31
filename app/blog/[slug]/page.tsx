@@ -9,6 +9,18 @@ interface BlogPostPageProps {
   }
 }
 
+// Definimos los slugs estáticos que queremos generar
+export async function generateStaticParams() {
+  return [
+    { slug: 'como-desarrollar-mentalidad-crecimiento' },
+    { slug: 'estrategias-gestion-tiempo' },
+    { slug: 'poder-comunicacion-asertiva' },
+    { slug: 'mindfulness-vivir-presente' },
+    { slug: 'liderazgo-consciente-tiempos-cambio' },
+    { slug: 'construyendo-relaciones-autenticas' }
+  ]
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = params
   const filePath = path.join(process.cwd(), 'app/blog/posts', `${slug}.txt`)
