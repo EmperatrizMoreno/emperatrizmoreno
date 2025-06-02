@@ -21,19 +21,19 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center">
-            <p className="text-gray-light mb-6">
+          <div className="flex flex-col justify-center items-center md:items-start">
+            <p className="text-gray-light mb-6 text-center md:text-left">
               Soy una apasionada del desarrollo personal y profesional con más de 10 años de experiencia ayudando a
               personas a descubrir su potencial y alcanzar sus metas.
             </p>
-            <p className="text-gray-light mb-6">
+            <p className="text-gray-light mb-6 text-center md:text-left">
               Mi misión es proporcionar herramientas, insights y reflexiones que inspiren a otros a crecer,
               transformarse y vivir una vida plena y con propósito.
             </p>
             <Button
               asChild
               variant="outline"
-              className="self-start border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white"
+              className="self-center md:self-start border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white"
             >
               <Link href="/sobre-mi">Leer más sobre mí</Link>
             </Button>

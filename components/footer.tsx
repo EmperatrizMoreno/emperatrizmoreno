@@ -7,13 +7,13 @@ export default function Footer() {
   return (
     <footer className="border-t border-primary-blue/30 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 justify-between">
+          <div className="text-center">
             <h3 className="text-xl font-bold mb-4">Emperatriz Moreno</h3>
             <p className="text-gray-light mb-4">
               Descubre insights, reflexiones y herramientas para tu crecimiento personal y profesional.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               <Link href="https://facebook.com" className="hover:text-accent-blue transition-colors">
                 <Facebook className="w-5 h-5" />
               </Link>
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="text-center">
             <h3 className="text-xl font-bold mb-4">Enlaces</h3>
             <ul className="space-y-2">
               <li>
@@ -47,7 +47,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center">
             <h3 className="text-xl font-bold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>

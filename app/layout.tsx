@@ -25,6 +25,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-navy-gradient text-white min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-grow pt-20">{children}</main>
+        <div className="h-px w-3/4 mx-auto bg-gray-200" />
         <Footer />
       </body>
     </html>

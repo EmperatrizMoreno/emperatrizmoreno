@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <div className="h-px w-3/4 mx-auto bg-gray-200" />
       <LatestPosts />
+      <div className="h-px w-3/4 mx-auto bg-gray-200" />
       <AboutSection />
     </>
   )
