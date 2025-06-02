@@ -72,9 +72,9 @@ export default function Header() {
 
           {/* Desktop Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button onClick={toggleSearch} className="hover:text-accent-blue transition-colors">
+            {/*<button onClick={toggleSearch} className="hover:text-accent-blue transition-colors">
               <Search className="w-5 h-5" />
-            </button>
+            </button>*/}
             <Link href="https://facebook.com" className="hover:text-accent-blue transition-colors">
               <Facebook className="w-5 h-5" />
             </Link>

@@ -1,53 +1,26 @@
-import { createServerClient, type CookieOptions } from '@supabase/ssr'
-import { NextResponse, type NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from "next/server";
+import { getUser, updateSession } from "./utils/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
-  let response = NextResponse.next({
-    request: {
-      headers: request.headers,
-    },
-  })
+  const protectedRoutesList = ["/dashboard"];
+  const authRoutesList = ["/", "/login"];
+  const currentPath = new URL(request.url).pathname;
 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() {
-          return request.cookies.getAll().map(cookie => ({
-            name: cookie.name,
-            value: cookie.value
-          }))
-        },
-        setAll(cookies: { name: string; value: string; options?: CookieOptions }[]) {
-          cookies.forEach(cookie => {
-            response.cookies.set({
-              name: cookie.name,
-              value: cookie.value,
-              ...cookie.options
-            })
-          })
-        }
-      },
-    }
-  )
+  const { data: { user } } = await getUser(request);
 
-  // Refrescar la sesión si existe
-  await supabase.auth.getSession()
+  if (protectedRoutesList.includes(currentPath) && !user) {
+    return NextResponse.redirect(new URL("/login", request.url));
+  }
 
-  return response
+  if (authRoutesList.includes(currentPath) && user) {
+    return NextResponse.redirect(new URL("/dashboard", request.url));
+  }
+
+  return await updateSession(request);
 }
 
-// Configurar las rutas que deben ser protegidas por el middleware
 export const config = {
   matcher: [
-    /*
-     * Coincide con todas las rutas excepto:
-     * - _next/static (archivos estáticos)
-     * - _next/image (optimización de imágenes)
-     * - favicon.ico (favicon)
-     * - public folder
-     */
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
-} 
+}; 
