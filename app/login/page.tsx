@@ -144,13 +144,13 @@ const Login: React.FC = () => {
                 className="w-full bg-blue-600 text-white py-2 rounded font-semibold mt-2 hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50"
                 disabled={loading}
               >{loading ? "Ingresando..." : "Iniciar Sesión"}</button>
-              <div className="text-center text-gray-300 mt-2 text-sm">
+              {/*<div className="text-center text-gray-300 mt-2 text-sm">
                 ¿No tienes una cuenta?{' '}
                 <span
                   className="text-blue-400 hover:underline cursor-pointer"
                   onClick={() => handleMode('register')}
                 >Regístrate aquí</span>
-              </div>
+              </div>*/}
             </>
           )}
           {mode === 'register' && (
