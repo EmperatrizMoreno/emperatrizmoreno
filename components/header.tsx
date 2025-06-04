@@ -2,15 +2,13 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, Search, X, Facebook, Instagram, Linkedin } from "lucide-react"
+import { Menu, X, Facebook, Instagram, Linkedin, LogIn } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
 
@@ -30,7 +28,6 @@ export default function Header() {
   }, [])
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-  const toggleSearch = () => setIsSearchOpen(!isSearchOpen)
 
   const navLinks = [
     { name: "Inicio", href: "/" },
@@ -72,9 +69,6 @@ export default function Header() {
 
           {/* Desktop Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            {/*<button onClick={toggleSearch} className="hover:text-accent-blue transition-colors">
-              <Search className="w-5 h-5" />
-            </button>*/}
             <Link href="https://facebook.com" className="hover:text-accent-blue transition-colors">
               <Facebook className="w-5 h-5" />
             </Link>
@@ -84,34 +78,18 @@ export default function Header() {
             <Link href="https://linkedin.com" className="hover:text-accent-blue transition-colors">
               <Linkedin className="w-5 h-5" />
             </Link>
+            <Link href="/login" className="hover:text-accent-blue transition-colors">
+              <LogIn className="w-5 h-5" />
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-4">
-            <button onClick={toggleSearch} className="hover:text-accent-blue transition-colors">
-              <Search className="w-5 h-5" />
-            </button>
             <button onClick={toggleMenu} className="hover:text-accent-blue transition-colors">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
-
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="py-4 border-t border-primary-blue/30">
-            <div className="flex items-center">
-              <Input
-                type="search"
-                placeholder="Buscar en el blog..."
-                className="bg-white/10 border-none text-white placeholder:text-gray-300"
-              />
-              <Button variant="ghost" className="ml-2 text-white hover:text-accent-blue">
-                <Search className="w-5 h-5" />
-              </Button>
-            </div>
-          </div>
-        )}
 
         {/* Mobile Menu */}
         {isMenuOpen && (
@@ -141,6 +119,9 @@ export default function Header() {
                   </Link>
                   <Link href="https://linkedin.com" className="hover:text-accent-blue transition-colors">
                     <Linkedin className="w-5 h-5" />
+                  </Link>
+                  <Link href="/login" className="hover:text-accent-blue transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    <LogIn className="w-5 h-5" />
                   </Link>
                 </div>
               </li>
