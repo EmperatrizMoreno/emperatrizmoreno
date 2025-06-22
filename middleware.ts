@@ -3,7 +3,7 @@ import { getUser, updateSession } from "./utils/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
   const protectedRoutesList = ["/dashboard"];
-  const authRoutesList = ["/", "/login"];
+  const authRoutesList = ["/login"];
   const currentPath = new URL(request.url).pathname;
 
   const { data: { user } } = await getUser(request);
