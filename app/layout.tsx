@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import RootLayoutClient from "@/components/RootLayoutClient";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Emperatriz Moreno | Blog Personal",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body>
         <RootLayoutClient>{children}</RootLayoutClient>
+        <SpeedInsights />
       </body>
     </html>
   );

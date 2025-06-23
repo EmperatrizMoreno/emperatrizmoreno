@@ -5,20 +5,23 @@ import SectionTitle from "@/components/section-title"
 
 export default function AboutSection() {
   return (
-    <section className="py-20 border-t border-primary-blue/30">
-      <div className="container mx-auto px-4">
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
         <SectionTitle className="text-white">Conoce a Emperatriz Moreno</SectionTitle>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mt-12">
-          <div className="flex justify-center md:justify-end">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden bg-secondary-blue">
-              <Image
-                src="/emperatrizmoreno/skadi1.jpg?height=400&width=400"
-                alt="Emperatriz Moreno"
-                fill
-                className="object-cover"
-              />
-            </div>
+          <div className="flex justify-center">
+            <Image
+              alt="Emperatriz Moreno"
+              className="rounded-full object-cover"
+              height={400}
+              src="/skadi1.jpg"
+              style={{
+                aspectRatio: "400/400",
+                objectFit: "cover",
+              }}
+              width={400}
+            />
           </div>
 
           <div className="flex flex-col justify-center items-center md:items-start">

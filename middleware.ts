@@ -8,14 +8,23 @@ export async function middleware(request: NextRequest) {
 
   const { data: { user } } = await getUser(request);
 
+  // LOGS DE DEPURACIÓN
+  console.log("[MIDDLEWARE] Ruta actual:", currentPath);
+  console.log("[MIDDLEWARE] Usuario autenticado:", !!user);
+  console.log("[MIDDLEWARE] protectedRoutesList:", protectedRoutesList);
+  console.log("[MIDDLEWARE] authRoutesList:", authRoutesList);
+
   if (protectedRoutesList.includes(currentPath) && !user) {
+    console.log("[MIDDLEWARE] Redirigiendo a /login");
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
   if (authRoutesList.includes(currentPath) && user) {
+    console.log("[MIDDLEWARE] Redirigiendo a /dashboard");
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 
+  console.log("[MIDDLEWARE] updateSession ejecutado");
   return await updateSession(request);
 }
 

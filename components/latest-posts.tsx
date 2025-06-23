@@ -13,7 +13,7 @@ const latestPosts: BlogPost[] = [
       "Descubre las claves para cultivar una mentalidad que te permita superar obstáculos y alcanzar tus metas personales y profesionales.",
     date: "21 Mayo, 2025",
     category: "Desarrollo Personal",
-    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
+    imageUrl: "/skadi1.jpg?height=300&width=600",
     slug: "como-desarrollar-mentalidad-crecimiento",
   },
   {
@@ -23,7 +23,7 @@ const latestPosts: BlogPost[] = [
       "Aprende a organizar tu tiempo de manera eficiente para aumentar tu productividad y reducir el estrés en tu día a día.",
     date: "15 Mayo, 2025",
     category: "Productividad",
-    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
+    imageUrl: "/skadi1.jpg?height=300&width=600",
     slug: "estrategias-gestion-tiempo",
   },
   {
@@ -32,7 +32,7 @@ const latestPosts: BlogPost[] = [
     excerpt: "Explora cómo la comunicación asertiva puede transformar tus relaciones personales y profesionales.",
     date: "10 Mayo, 2025",
     category: "Comunicación",
-    imageUrl: "/emperatrizmoreno/skadi1.jpg?height=300&width=600",
+    imageUrl: "/skadi1.jpg?height=300&width=600",
     slug: "poder-comunicacion-asertiva",
   },
 ]

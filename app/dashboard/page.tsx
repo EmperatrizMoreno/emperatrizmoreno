@@ -25,7 +25,7 @@ const Dashboard = () => {
   const handleLogout = async () => {
     const supabase = createClient();
     await supabase.auth.signOut();
-    router.push("/");
+    window.location.assign("/");
   };
 
   return (
