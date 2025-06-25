@@ -12,7 +12,7 @@ export default function PostCard({ post }: PostCardProps) {
   return (
     <Card className="overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow duration-300 bg-white/10 backdrop-blur-sm border-primary-blue/30">
       <div className="relative aspect-video w-full">
-        <Image src={post.imageUrl || "/skadi1.jpg"} alt={post.title} fill sizes="100vw" className="object-cover" />
+        <Image src={post.imageUrl || "/skadi1.jpg"} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
         <div className="absolute top-4 left-4 bg-secondary-blue text-white text-xs font-medium px-2 py-1 rounded">
           {post.category}
         </div>
